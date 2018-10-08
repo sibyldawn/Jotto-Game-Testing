@@ -6,15 +6,12 @@ import checkPropTypes from 'check-prop-types';
 import { findByTestAttr,checkProp } from '../test/testUtils';
 import Congrats from './Congrats';
 
-Enzyme.configure({adapter: new EnzymeAdapter()});
-
 const defaultProps = { success:false }
 
 const setup = (props={}) => {
     const setupProps = {...defaultProps,...props}
     return shallow(<Congrats {...setupProps}/>)
 } 
-
 
 test('renders without error',() => {
   const wrapper = setup();
