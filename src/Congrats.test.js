@@ -3,7 +3,7 @@ import Enzyme, { shallow } from 'enzyme';
 import EnzymeAdapter from 'enzyme-adapter-react-16';
 import checkPropTypes from 'check-prop-types';
 
-import { findByTestAttr,checkProp } from '../test/testUtils';
+import { findByTestAttr,checkProps } from '../test/testUtils';
 import Congrats from './Congrats';
 
 const defaultProps = { success:false }
@@ -33,5 +33,5 @@ test('renders no-empty congrats when `success` prop is true',() => {
 
 test('does not throw warning with expected props', () => {
    const expectedProps = { success: false};
-   checkProp(Congrats, expectedProps)
+   checkProps(Congrats, expectedProps)
 })
